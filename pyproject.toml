@@ -22,14 +22,37 @@ dependencies = [
     'h5py',
     'healpy',
     'lsst-sphgeom',
-    'lsstdesc_diffsky',
     'numpy',
     'pandas',
     'pyarrow',
     'pyerfa',
     'pyyaml',
 ]
-requires-python = ">=3.9" # For setuptools >= 61.0 support
+requires-python = ">=3.11" # For setuptools >= 61.0 support, for opencosmo support
+
+[project.optional-dependencies]
+diffsky = [
+    'diffsky',
+    'opencosmo'
+]
+rr23_legacy = [
+    "diffmah==0.4.2",
+    "diffstar==0.2.2",
+    "dsps==0.3.5",
+    "jax==0.4.19",
+    "lsstdesc-diffsky==1.0.0",
+    "scipy==1.12.0",
+]
+# docs = [
+#     "sphinx",
+#     "sphinx_rtd_theme",
+#     "sphinx_toolbox",
+#     "sphinxcontrib-autoprogram",
+#     "sphinxcontrib.datatemplates",
+# ]
+# tests = [
+#     "pytest",
+# ]
 
 [tool.setuptools.dynamic]
 version = {attr = "skycatalogs._version.__version__"}
