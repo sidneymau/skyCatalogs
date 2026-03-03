@@ -28,7 +28,7 @@ dependencies = [
     'pyerfa',
     'pyyaml',
 ]
-requires-python = ">=3.9" # For setuptools >= 61.0 support
+requires-python = ">=3.11" # For setuptools >= 61.0 support, for opencosmo support
 
 [project.optional-dependencies]
 diffsky = [
