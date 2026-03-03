@@ -106,7 +106,8 @@ jobs:
             - name: Install skyCatalogs
               run: |
                 uv venv
-                uv pip install pytest
+                # uv pip install pytest
+                uv pip install -r test_requirements.txt
                 uv pip install .
 
             - name: Run tests without the LSST Stack
